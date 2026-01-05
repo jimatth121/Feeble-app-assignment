@@ -207,7 +207,7 @@ export function BirdLargeFlyouts({ left, right }: BirdLargeFlyoutsProps) {
         alt=""
         width={left.width}
         height={left.height}
-        className="bird-flyout-left fixed bottom-[10vh] left-[-140px] z-20 h-auto w-[92px] select-none will-change-transform motion-reduce:hidden sm:left-[-160px] sm:w-[118px]"
+        className="bird-flyout-left fixed bottom-[10vh] left-0 z-20 hidden h-auto w-[92px] select-none will-change-transform motion-reduce:hidden [--flyout-start:-180px] sm:block sm:w-[118px]"
         sizes={left.sizes}
         onAnimationEnd={() => setDoneCount((c) => c + 1)}
         priority
@@ -217,7 +217,7 @@ export function BirdLargeFlyouts({ left, right }: BirdLargeFlyoutsProps) {
         alt=""
         width={right.width}
         height={right.height}
-        className="bird-flyout-right fixed bottom-[10vh] right-[-140px] z-20 h-auto w-[92px] select-none will-change-transform motion-reduce:hidden sm:right-[-160px] sm:w-[118px]"
+        className="bird-flyout-right fixed bottom-[10vh] right-0 z-20 hidden h-auto w-[92px] select-none will-change-transform motion-reduce:hidden [--flyout-start:180px] sm:block sm:w-[118px]"
         sizes={right.sizes}
         onAnimationEnd={() => setDoneCount((c) => c + 1)}
         priority

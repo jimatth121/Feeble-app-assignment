@@ -44,6 +44,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .hero-radial {
   background: radial-gradient(
     1200px 700px at 50% 20%,
@@ -95,22 +100,24 @@ body {
 
 @keyframes birdFlyCrossL2R {
   0% {
-    transform: translate3d(0, 0, 0) rotate(-10deg) scale(1);
+    transform: translate3d(var(--flyout-start), 0, 0) rotate(-10deg) scale(1);
     opacity: 1;
   }
   100% {
-    transform: translate3d(140vw, -92vh, 0) rotate(14deg) scale(1.05);
+    transform: translate3d(calc(140vw - var(--flyout-start)), -92vh, 0)
+      rotate(14deg) scale(1.05);
     opacity: 0;
   }
 }
 
 @keyframes birdFlyCrossR2L {
   0% {
-    transform: translate3d(0, 0, 0) rotate(10deg) scale(1);
+    transform: translate3d(var(--flyout-start), 0, 0) rotate(10deg) scale(1);
     opacity: 1;
   }
   100% {
-    transform: translate3d(-140vw, -92vh, 0) rotate(-14deg) scale(1.05);
+    transform: translate3d(calc(-140vw - var(--flyout-start)), -92vh, 0)
+      rotate(-14deg) scale(1.05);
     opacity: 0;
   }
 }
