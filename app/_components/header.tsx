@@ -55,7 +55,7 @@ export function Header() {
           />
         </a>
 
-        <div className="hidden items-center gap-7 text-[11px] font-semibold text-slate-500 md:flex">
+        <div className="hidden items-center gap-7 text-[11px] font-semibold text-slate-500 md:flex md:text-[13px]">
           {links.map((link) => (
             <a
               key={link.label}
@@ -85,7 +85,7 @@ export function Header() {
 
           <a
             href="#"
-            className="relative hidden h-9 items-center justify-center overflow-hidden rounded-full bg-[#1677ff] px-4 text-[11px] font-semibold text-white shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1677ff] focus-visible:ring-offset-2 before:absolute before:-inset-px before:rounded-full before:translate-x-[-110%] before:bg-white before:transition-transform before:duration-300 before:ease-out hover:bg-white hover:shadow-2xl hover:text-[#1677ff] hover:before:translate-x-0 md:inline-flex"
+            className="relative hidden h-9 items-center justify-center overflow-hidden rounded-full bg-[#1677ff] px-4 text-[11px] font-semibold text-white shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1677ff] focus-visible:ring-offset-2 before:absolute before:-inset-px before:rounded-full before:translate-x-[-110%] before:bg-white before:transition-transform before:duration-300 before:ease-out hover:bg-white hover:shadow-2xl hover:text-[#1677ff] hover:before:translate-x-0 md:inline-flex md:text-[13px]"
           >
             <span className="relative z-10">Contact Sales</span>
           </a>
@@ -180,4 +180,3 @@ function CloseIcon({ className }: { className?: string }) {
     </svg>
   );
 }
-
