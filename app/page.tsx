@@ -59,7 +59,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="mt-12 flex flex-col items-center gap-3">
+            <div className="mt-48 flex flex-col items-center gap-3">
               <ScrollHint />
             </div>
           </div>
@@ -75,13 +75,15 @@ function Header() {
   return (
     <header className="mx-auto w-full max-w-5xl px-6 pt-6 md:w-[60%]">
       <nav className="flex items-center justify-between rounded-full bg-white/85 px-6 py-3 shadow-sm ring-1 ring-black/5 backdrop-blur">
-        <a href="#" className="inline-flex items-center gap-2">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-900 text-white shadow-sm">
-            <LogoMark className="h-4 w-4" />
-          </span>
-          <span className="text-lg font-extrabold tracking-tight text-slate-900">
-            coup<span className="text-slate-900/70">.</span>
-          </span>
+        <a href="#" className="inline-flex items-center">
+          <Image
+            src="/images/app-logo.png"
+            alt="Coup"
+            width={107}
+            height={34}
+            className="h-8 w-auto select-none"
+            priority
+          />
         </a>
 
         <div className="hidden items-center gap-7 text-[11px] font-semibold text-slate-500 md:flex">
@@ -101,9 +103,9 @@ function Header() {
 
         <a
           href="#"
-          className="inline-flex h-9 items-center justify-center rounded-full bg-[#1677ff] px-4 text-[11px] font-semibold text-white shadow-sm transition hover:bg-[#0e66e9] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1677ff] focus-visible:ring-offset-2"
+          className="relative inline-flex h-9 items-center justify-center overflow-hidden rounded-full bg-[#1677ff] px-4 text-[11px] font-semibold text-white shadow-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1677ff] focus-visible:ring-offset-2 before:absolute before:-inset-px before:rounded-full before:translate-x-[-110%] before:bg-white before:transition-transform before:duration-300 border-0 hover:bg-white hover:shadow-2xl before:ease-out hover:before:translate-x-0 hover:text-[#1677ff]"
         >
-          Contact Sales
+          <span className="relative z-10">Contact Sales</span>
         </a>
       </nav>
     </header>
@@ -129,7 +131,7 @@ function CloudBase() {
           alt=""
           width={104}
           height={77}
-          className="absolute bottom-10 left-16 h-auto w-[72px] select-none sm:bottom-12 sm:left-24 sm:w-[92px]"
+          className="absolute bottom-5 left-24 h-auto w-[72px] select-none sm:bottom-12 sm:left-56 sm:w-[92px]"
           sizes="(min-width: 640px) 92px, 72px"
         />
         <Image
@@ -153,7 +155,7 @@ function CloudBase() {
           alt=""
           width={129}
           height={102}
-          className="absolute bottom-14 right-16 h-auto w-[78px] select-none sm:bottom-16 sm:right-24 sm:w-[102px]"
+          className="absolute bottom-14 right-64 h-auto w-[78px] select-none sm:bottom-16 sm:right-40 sm:w-[102px]"
           sizes="(min-width: 640px) 102px, 78px"
         />
 
@@ -233,24 +235,6 @@ function FloatingBirds() {
         sizes="30px"
       />
     </div>
-  );
-}
-
-function LogoMark({ className }: { className?: string }) {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className={className}
-      fill="none"
-    >
-      <path
-        d="M7 6.5A4.5 4.5 0 0 1 11.5 2H17a2 2 0 0 1 2 2v4.5A4.5 4.5 0 0 1 14.5 13H9v6a1 1 0 0 1-1.7.7l-2.8-2.8A2.4 2.4 0 0 1 4 15.2V6.5A0 0 0 0 1 7 6.5Z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinejoin="round"
-      />
-    </svg>
   );
 }
 
